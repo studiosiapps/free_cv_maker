@@ -25,6 +25,7 @@ export function CvCard({ template, selected, onSelect }: CvCardProps) {
     >
       <div className="aspect-[3/4] relative overflow-hidden bg-gray-50">
         <Image
+        unoptimized
           src={`${API_BASE_URL}/${template.image}`}
           alt={`CV Template ${template.id}`}
           fill
