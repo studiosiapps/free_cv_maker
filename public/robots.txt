@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://freecvmaker.com/sitemap.xml
