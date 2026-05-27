@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { APP_NAME, APP_DESCRIPTION, APP_URL } from "@/lib/constants";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -94,6 +95,13 @@ export default function RootLayout({
             }),
           }}
         />
+
+        <Script
+  async
+  strategy="afterInteractive"
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8201546963715274"
+  crossOrigin="anonymous"
+/>
       </head>
       <body className="min-h-screen flex flex-col">
         <Toaster />
