@@ -292,10 +292,10 @@ export default function FillSectionsPage({ params }: Props) {
               <Button
                 size="lg"
                 onClick={handleGenerate}
-                disabled={generating}
+                loading={generating}
                 className="min-w-[200px]"
               >
-                {generating ? "Generating..." : "Generate CV"}
+                Generate CV
               </Button>
             </div>
           </div>

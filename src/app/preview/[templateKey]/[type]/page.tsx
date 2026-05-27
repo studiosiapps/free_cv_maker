@@ -147,10 +147,11 @@ export default function PreviewCvPage({ params }: Props) {
                 <Button
                   size="sm"
                   onClick={handleExportPdf}
-                  disabled={exporting || !htmlContent}
+                  loading={exporting}
+                  disabled={!htmlContent}
                 >
                   <Download className="mr-2 h-4 w-4" />
-                  {exporting ? "Exporting..." : "Save PDF"}
+                  Save PDF
                 </Button>
               </div>
             </div>
@@ -202,9 +203,9 @@ export default function PreviewCvPage({ params }: Props) {
                   <Edit3 className="mr-2 h-4 w-4" />
                   Edit Sections
                 </Button>
-                <Button onClick={handleExportPdf} disabled={exporting}>
+                <Button onClick={handleExportPdf} loading={exporting}>
                   <Download className="mr-2 h-4 w-4" />
-                  {exporting ? "Exporting PDF..." : "Download PDF"}
+                  Download PDF
                 </Button>
               </div>
             )}
